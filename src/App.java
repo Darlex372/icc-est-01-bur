@@ -1,5 +1,3 @@
-
-
 public class App {
     public static void main(String[] args) throws Exception {
         Metodos metodoOrdenamiento = new Metodos();
@@ -12,10 +10,10 @@ public class App {
         int[] arregloOrdenadoDes = metodoOrdenamiento.sortByBubbleDes(arregloD);
         metodoOrdenamiento.printArregloDes(arregloOrdenadoDes);
 
-        //ORDENA LAS PALABRAS ALFABETICAMENTE DE LA CADENA DE TEXTO
-        String cadena="este es un ejemplo de texto para ordenar";
-        String[] palabras =cadena.split(" ");
-        String[] palabrasOrdenara= metodoOrdenamiento.sortByBubblePalabras(palabras);
-        metodoOrdenamiento.printArreglo(palabrasOrdenara);
+        // ORDENAR PALABRAS ALFABÉTICAMENTE EN UNA CADENA DE TEXTO
+        String cadena = "este es un ejemplo de texto para ordenar";
+        String[] palabras = cadena.split(" ");
+        String[] palabrasOrdenadas = metodoOrdenamiento.sortByBubblePalabras(palabras);
+        metodoOrdenamiento.printArreglo(palabrasOrdenadas);
     }
 }

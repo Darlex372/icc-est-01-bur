@@ -43,28 +43,24 @@ public class Metodos {
         }
     }
 
-    public String[] sortByBubblePalabras(String[] palabras)
-    {
-        int tamanio=palabras.length;
+    public String[] sortByBubblePalabras(String[] palabras) {
+        int tamanio = palabras.length;
 
-        for (int i = 0; i < tamanio; i++) 
-        {
-            for (int j=i+1; j<tamanio; i++)
-            {
-                if (palabras[i].compareToIgnoreCase(palabras[j])>0)
-                {
-                    String aux=palabras[i];
-                    palabras[i]=palabras[j];
-                    palabras[j]=aux;
+        for (int i = 0; i < tamanio - 1; i++) { // Corrección: iterar hasta tamanio - 1
+            for (int j = i + 1; j < tamanio; j++) { // Corrección: incrementar j
+                if (palabras[i].compareToIgnoreCase(palabras[j]) > 0) {
+                    String aux = palabras[i];
+                    palabras[i] = palabras[j];
+                    palabras[j] = aux;
                 }
             }
-
         }
         return palabras;
     }
+
     public void printArreglo(String[] arreglo) {
         for (String elemento : arreglo) {
             System.out.println(elemento);
         }
     }
-} 
+}
